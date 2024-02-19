@@ -3,8 +3,10 @@ import authSlice from './AuthSlice';
 
 const store = configureStore({
     reducer: {
-        auth : authSlice
+        auth : authSlice,
+        //TODO: add more slices here for posts
     }
-})
+});
+
 
 export default store;
