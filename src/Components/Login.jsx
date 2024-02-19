@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import {Link, useNavigate} from 'react-router-dom'
-import { login as authLogin } from '../store/authSlice'
+import { login as authLogin } from '../store/AuthSlice'
 import {Button, Input, Logo} from "./index"
 import {useDispatch} from "react-redux"
-import authService from "../Appwrite/auth"
+import authService from "../appwrite/auth"
 import {useForm} from "react-hook-form"
 
 
@@ -77,14 +77,14 @@ function Login() {
                         required: true,
                     })}
                     />
-                    <button 
+                    {/* <button 
                     type="submit" 
-                    className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
+                    className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button> */}
 
-                    {/* <Button
+                    <Button
                     type="submit"
                     className="w-full "
-                    >Sign in</Button> */}
+                    >Sign in</Button>
                 </div>
             </form>
             </div>
