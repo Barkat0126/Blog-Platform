@@ -28,21 +28,6 @@ export class AuthService {
         }
     }
 
-    // async createAccount({email, password, name}) {
-    //     try {
-    //         const userAccount = await this.account.create(email, password, name);
-    //         if (userAccount) {
-    //             // call another method
-    //             return this.login({email, password});
-    //         } else {
-    //            return  userAccount;
-    //         }
-    //     } catch (error) {
-    //         throw error;
-    //     }
-    // }
-    
-
     async login({email, password}) {
         try {
             return await this.account.createEmailSession(email, password);
@@ -58,7 +43,7 @@ export class AuthService {
             console.log("Appwrite serive :: getCurrentUser :: error", error);
         }
 
-        // return null;
+        return null;
     }
 
     async logout() {
